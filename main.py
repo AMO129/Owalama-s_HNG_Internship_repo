@@ -47,8 +47,8 @@ def classify_name():
 
     #EXTRACTION AND PROCESSING
    
-    probability = raw_data('probability', 0)
-    sample_size = raw_data('count', 0)
+    probability = raw_data.get('probability', 0)
+    sample_size = raw_data.get('count', 0)
 
     #CONFIDENCE LOGIC
     is_confident = bool(probability >= 0.7 and sample_size >= 100)
