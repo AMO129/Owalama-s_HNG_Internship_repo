@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+sqlalchemy
+httpx
+uuid6
+psycopg2-binary
