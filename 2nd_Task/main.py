@@ -1,3 +1,5 @@
+#LIBRARIES
+
 import asyncio
 
 import httpx
@@ -26,7 +28,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 
-# --- DATABASE SETUP ---
+#DATABASE SETUP
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")
 
@@ -52,7 +54,7 @@ Base = declarative_base()
 
 
 
-# --- MODEL  ---
+#THE MODEL
 
 class Profile(Base):
 
@@ -90,7 +92,7 @@ app = FastAPI()
 
 
 
-# --- CORS (Required for Grading) ---
+#CORS (Required for Grading)
 
 app.add_middleware(
 
@@ -122,7 +124,7 @@ def get_age_group(age: int) -> str:
 
 
 
-# --- ENDPOINTS ---
+#ENDPOINTS
 
 
 
@@ -198,7 +200,7 @@ async def create_profile(request: Request, response: Response):
 
 
 
-        # Multi-API Integration
+        #MULTI-API INTEGRATION
 
         async with httpx.AsyncClient(timeout=10.0) as client:
 
